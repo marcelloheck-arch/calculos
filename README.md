@@ -200,7 +200,6 @@ git push origin v1.0.0
 
 Este projeto está sob a licença MIT — veja o arquivo `LICENSE`.
 
----
 
 Se precisar, posso também gerar um arquivo `CHANGELOG.md` com histórico mais detalhado ou criar o Release no GitHub (requer token ou `gh`).
 
@@ -213,6 +212,27 @@ Este manual foi escrito para alguém que nunca usou o terminal ou Python. Siga c
 ```powershell
 C:\Users\marcelo.heck\Desktop\AUTORIZACOES\calculos
 ```
+
+## Versão Web (deploy estático)
+
+Adicionei uma versão web estática na pasta `web/` com uma interface amigável em `index.html` que pode ser implantada em serviços de hospedagem estática (Vercel, Netlify, GitHub Pages, etc.).
+
+Arquivos principais:
+
+- `web/index.html` — interface da calculadora
+- `web/style.css` — estilos
+- `web/app.js` — lógica do front-end (valida entradas, calcula juros e formata resultados)
+
+Como implantar no Vercel (passos rápidos):
+
+1. Acesse https://vercel.com e faça login com sua conta GitHub.
+2. Clique em "New Project" → "Import Git Repository" → escolha `marcelloheck-arch/calculos`.
+3. Nas configurações do projeto, defina o campo "Root Directory" como `web`.
+4. Clique em "Deploy". O Vercel irá gerar um link público (ex: https://seu-projeto.vercel.app) onde a calculadora estará acessível.
+
+Observação: também é possível usar Netlify (arrastar a pasta `web`) ou GitHub Pages (configurar branch e pasta `web`).
+
+Se quiser, posso criar um `vercel.json` com configurações padrão e preparar o repositório para deploy automático.
 
 2) Verifique se o Python está instalado:
 

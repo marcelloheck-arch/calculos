@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Calculadora de Juros — Web</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Calculadora de juros simples e compostos — interface web" />
+  <meta name="robots" content="noindex,nofollow" />
+</head>
+<body>
+  <main class="container">
+    <h1>Calculadora de Juros</h1>
+    <form id="calcForm" class="card" autocomplete="off">
+      <label>Tipo de juros
+        <select id="tipo">
+          <option value="simples">Juros Simples</option>
+          <option value="compostos">Juros Compostos</option>
+        </select>
+      </label>
+
+      <label>Capital inicial (R$)
+        <input id="capital" inputmode="decimal" placeholder="Ex: 1500,50" />
+      </label>
+
+      <label>Taxa de juros (% por período)
+        <input id="taxa" inputmode="decimal" placeholder="Ex: 5" />
+      </label>
+
+      <label>Período (nº de períodos)
+        <input id="periodo" inputmode="decimal" placeholder="Ex: 2" />
+      </label>
+
+      <div class="actions">
+        <button type="button" id="calcular">Calcular</button>
+        <button type="reset" id="limpar">Limpar</button>
+      </div>
+    </form>
+
+    <section id="resultado" class="card hidden" aria-live="polite">
+      <h2>Resultado</h2>
+      <p id="resCapital"></p>
+      <p id="resJuros"></p>
+      <p id="resMontante"></p>
+    </section>
+
+    <section class="card info">
+      <h3>Sobre</h3>
+      <p>Ferramenta simples para calcular juros. Use taxa e período na mesma unidade (ex: taxa mensal com período em meses).</p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
